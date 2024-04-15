@@ -67,7 +67,7 @@ defmodule Midifile.Writer do
   def header_io_list(_format, division, num_tracks) do
     [?M, ?T, ?h, ?d,
      0, 0, 0, 6,                  # header chunk size
-     0, 1,                        # format,
+     0, 0,                        # format,
      (num_tracks >>> 8) &&& 255, # num tracks
       num_tracks        &&& 255,
      (division >>> 8) &&& 255, # division
